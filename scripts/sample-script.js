@@ -13,8 +13,8 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  await hre.network.provider.send("evm_setAutomine", [false]);
-  await hre.network.provider.send("evm_setIntervalMining", [5000]);
+  // await hre.network.provider.send("evm_setAutomine", [false]);
+  // await hre.network.provider.send("evm_setIntervalMining", [5000]);
 
   // We get the contract to deploy
   const Greeter = await hre.ethers.getContractFactory("Greeter");
