@@ -9,7 +9,7 @@ const signer = provider.getSigner();
 
 let accounts;
 
-const greeterAddress = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
+const greeterAddress = GreeterContractJSON.address;
 const greeterAbi = GreeterContractJSON.abi;
 
 const greeterContract = new ethers.Contract(greeterAddress, greeterAbi, provider);
