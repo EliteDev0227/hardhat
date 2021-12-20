@@ -15,5 +15,10 @@ describe("Greeter", function () {
     await setGreetingTx.wait();
 
     expect(await greeter.greet()).to.equal("Hola, mundo!");
+
+    // test from different account
+    const [owner, addr1] = await ethers.getSigners();
+    await greeter.connect(addr1).setGreeting("Hallo, Erde!");
+    expect(await greeter.greet()).to.equal("Hallo, Erde!");
   });
 });
